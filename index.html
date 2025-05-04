@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Big 50 Hotel</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">BIG 50 HOTEL</div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="burger" onclick="toggleMenu()">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </nav>
+    </header>
+
+    <section id="home" class="hero">
+      <h1>WELCOME TO<br />BIG 50 HOTEL</h1>
+      <a href="#contact" class="btn">Book Now</a>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
+
+    <section id="reviews" class="section">
+      <h2>Reviews</h2>
+      <div id="reviewies">
+        <div id="review-one" class="review">
+          <div class="stars">★★★★★</div>
+          <p>"Great stay and excellent service!"</p>
+          <strong>Chukwuka Obioma (via Google Maps)</strong>
+        </div>
+        <div id="review-two" class="review">
+          <div class="stars">★★★★★</div>
+          <p>"Very comfortable and serene hotel. Excellent reception!"</p>
+          <strong>Jane Smith</strong>
+        </div>
+      </div>
+      <div id="reviewies">
+        <div id="review-one" class="review">
+          <div class="stars">★★★★☆</div>
+          <p>"Clean and well-maintained facilities. Friendly staff."</p>
+          <strong>Verified Google User</strong>
+        </div>
+        <div id="review-two" class="review">
+          <div class="stars">★★★★★</div>
+          <p>
+            "One of the most amazing places in the area. Highly recommended!"
+          </p>
+          <strong>John Doe</strong>
+        </div>
+      </div>
+      <div id="read-more">
+        <a href="" class="btn">Read More</a>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <h2>Services</h2>
+      <p>Free Wi-Fi, Room Service, Pool, Spa, and more.</p>
+    </section>
+
+    <section id="contact" class="section contact">
+      <h2>Contact</h2>
+      <div id="parent-two" class="contact-info">
+        <div class="map">
+          <iframe
+            src="https://maps.app.goo.gl/8rN1pytGduyZYEur7?g_st=aw"
+            width="100%"
+            height="200"
+            style="border: 0"
+          ></iframe>
+        </div>
+        <div class="details">
+          <p>
+            <strong>Address:</strong> 37JM+62G, opposite fat oil, Jattu, Edo
+            state, NG
+          </p>
+          <p><strong>Phone:</strong> (123) 455-7380</p>
+          <p><strong>Email:</strong> info@big50hotel.com</p>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
