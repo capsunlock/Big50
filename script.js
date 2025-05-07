@@ -34,3 +34,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     document.getElementById('navLinks').classList.remove('active');
   });
 });
+
+// Popup with call link
+function showPopup() {
+  document.getElementById("popup").style.display = "flex";
+}
+
+function handleOutsideClick(event) {
+  const popup = document.getElementById("popup");
+  popup.style.display = "none";
+}
