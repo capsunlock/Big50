@@ -2,6 +2,25 @@ function toggleMenu() {
   const navLinks = document.getElementById('navLinks');
   navLinks.classList.toggle('active');
 }
+// switching of home background
+const images = [
+  'url("images/top-img.png")',
+  'url("images/top-img2.png")'
+];
+
+let current = 0;
+const section = document.getElementById('home');
+
+function switchBackground() {
+  section.style.backgroundImage = images[current];
+  current = (current + 1) % images.length
+}
+
+//initial background
+switchBackground();
+
+// change every 5 seconds
+setInterval(switchBackground, 15000);
 
 // Smooth scrolling for menu links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

@@ -66,6 +66,13 @@ header {
   align-items: center;
   justify-content: center;
   text-align: center;
+  transition: background-image 1s ease-in-out;
+}
+
+.home-content{
+  background-color: rgba(0,0,0,0.5);
+  padding: 2rem;
+  border-radius: 10px;
 }
 
 .hero h1 {
@@ -86,6 +93,34 @@ header {
   background-color: #555;
 }
 
+.sect {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+}
+
+.colum {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.it-em {
+  text-align: center;
+}
+
+.it-em img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.it-em h4 {
+  margin: 10px 0 5px;
+}
+
 .section {
   padding: 2rem;
   max-width: 900px;
@@ -94,7 +129,7 @@ header {
   margin-bottom: 1rem;
 }
 
-#reviewies {
+#review-content {
   display: flex;
   gap: 1rem;
 }
@@ -149,13 +184,25 @@ header {
     flex-direction: column;
   }
 
-  #reviewies {
+  #review-content {
     display: block;
   }
-
 }
 
+
 @media (min-width: 768px){
+
+  .sect {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .colum {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 
   .contact-info {
     display: flex;
@@ -172,5 +219,4 @@ header {
   .details {
     margin-left: auto;
   }
-
 }
