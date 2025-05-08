@@ -8,7 +8,7 @@ body {
 
 header {
   background: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -69,8 +69,8 @@ header {
   transition: background-image 1s ease-in-out;
 }
 
-.home-content{
-  background-color: rgba(0,0,0,0.5);
+.home-content {
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 2rem;
   border-radius: 10px;
 }
@@ -92,6 +92,7 @@ header {
 .btn:hover {
   background-color: #555;
 }
+
 .popup-overlay {
   display: none;
   position: fixed;
@@ -134,15 +135,18 @@ header {
   padding: 10px 20px;
   font-size: 16px;
 }
+
 .ty {
   display: flex;
 }
+
 .ty img {
   height: 30px;
   margin-left: auto;
   margin-right: 10px;
   margin-top: 15px;
 }
+
 .ty p {
   margin-right: auto;
   font-weight: bolder;
@@ -185,11 +189,61 @@ header {
   margin-bottom: 1rem;
 }
 
-/* #gallery-items {
-  background: url('images/top-img.png') no-repeat center center/cover;
-  height: 70vh;
-  color: #007BFF;
-} */
+.section-gallery {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 500px;
+}
+
+.left,
+.right {
+  flex: 1;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.left img {
+  flex: 1;
+  width: 100%;
+  object-fit: cover;
+  height: 50%;
+  /* Ensure equal split */
+}
+
+.right {
+  position: relative;
+}
+
+.right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.see-more {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.see-more:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
 
 #review-content {
   display: flex;
@@ -206,13 +260,14 @@ header {
   margin-right: auto;
 }
 
-#review-two{
+#review-two {
   margin-right: auto;
 }
 
 #parent-two {
   display: flex;
 }
+
 #read-more {
   text-align: center;
   margin-top: 30px;
@@ -221,9 +276,8 @@ header {
 .details p {
   margin: 0.5rem 0;
 }
-.details-content {
-  
-}
+
+.details-content {}
 
 @media (max-width: 768px) {
   .nav-links {
@@ -233,7 +287,7 @@ header {
     position: absolute;
     right: 2rem;
     top: 60px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 1rem;
   }
 
@@ -255,7 +309,7 @@ header {
 }
 
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
 
   .sect {
     flex-direction: row;
