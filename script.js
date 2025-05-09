@@ -48,31 +48,42 @@ function handleOutsideeClick(event) {
 //Rooms Popup
 
 function showPooopup(roomId) {
-        document.getElementById("pooopup").style.display = "flex";
+  const bopup = document.getElementById("pooopup")
+  bopup.style.display = "flex"
 
-        const allGroups = document.querySelectorAll(".pooopup-images");
-        allGroups.forEach((el) => {
-          el.style.display = "none";
-          const items = el.querySelectorAll(".pooopup-item");
-          items.forEach((item) => {
-            item.style.gridColumn = "auto";
-            item.style.justifySelf = "auto";
-          });
-        });
+  requestAnimationFrame(() => bopup.classList.add("active"))
 
-        const selectedGroup = document.getElementById(
-          "pooopupImages-" + roomId
-        );
-        if (selectedGroup) {
-          selectedGroup.style.display = "grid";
-          const items = selectedGroup.querySelectorAll(".pooopup-item");
-          if (items.length % 2 === 1) {
-            items[items.length - 1].style.gridColumn = "span 2";
-            items[items.length - 1].style.justifySelf = "center";
-          }
-        }
-      }
+  const allGroups = document.querySelectorAll(".pooopup-images");
+  allGroups.forEach((el) => {
+  el.style.display = "none";
+  const items = el.querySelectorAll(".pooopup-item");
+  items.forEach((item) => {
+  item.style.gridColumn = "auto";
+  item.style.justifySelf = "auto";
+});
+});
 
-      function handleOutsideClick(event) {
-        document.getElementById("pooopup").style.display = "none";
-      }
+const selectedGroup = document.getElementById(
+  "pooopupImages-" + roomId
+);
+if (selectedGroup) {
+  selectedGroup.style.display = "grid";
+  const items = selectedGroup.querySelectorAll(".pooopup-item");
+  if (items.length % 2 === 1) {
+  items[items.length - 1].style.gridColumn = "span 2";
+  items[items.length - 1].style.justifySelf = "center";
+}}}
+
+function handleOutsideClick(event) {
+  const bopup = document.getElementById("pooopup");
+  bopup.classList.remove("active");
+  setTimeout(() => {
+    bopup.style.display = "none";
+  }, 400);
+}
+
+document.addEventListener("keydown", function(e) {
+  if (e.key === "Escape") {
+    document.getElementById("pooopup").style.display = "none";
+  }
+})
