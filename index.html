@@ -11,7 +11,10 @@
   <body>
     <header>
       <nav class="navbar">
-        <div class="logo">BIG 50 HOTEL</div>
+        <div class="logo">
+          <img src="images/bigfiftylogobold.png" alt="" />
+          <h1>BIG 50 HOTEL</h1>
+        </div>
         <ul class="nav-links" id="navLinks">
           <li><a href="#home">Home</a></li>
           <li><a href="#rooms">Rooms</a></li>
@@ -70,13 +73,20 @@
       <section class="sect">
         <div class="colum">
           <div class="it-em">
-            <img src="images/big-fifty-two.jpg" alt="Placeholder Image 1" />
+            <img
+              onclick="showPooopup('one')"
+              src="../Big50/images/big-fifty-two.jpg"
+              alt="Standard Room"
+            />
             <h4>STANDARD</h4>
             <p>Room rate: 35,500 <br />Caution fee: 15,000</p>
           </div>
-
           <div class="it-em">
-            <img src="images/big-fifty-two.jpg" alt="Placeholder Image 2" />
+            <img
+              onclick="showPooopup('two')"
+              src="../Big50/images/big-fifty-two.jpg"
+              alt="Deluxe Room"
+            />
             <h4>DELUXE</h4>
             <p>Room rate: 37,500 <br />Caution fee: 15,000</p>
           </div>
@@ -84,13 +94,20 @@
 
         <div class="colum">
           <div class="it-em">
-            <img src="images/big-fifty-two.jpg" alt="Placeholder Image 3" />
+            <img
+              onclick="showPooopup('three')"
+              src="../Big50/images/big-fifty-two.jpg"
+              alt="Executive Room"
+            />
             <h4>EXECUTIVE</h4>
             <p>Room rate: 40,500 <br />Caution fee: 15,000</p>
           </div>
-
           <div class="it-em">
-            <img src="images/big-fifty-two.jpg" alt="Placeholder Image 4" />
+            <img
+              onclick="showPooopup('four')"
+              src="../Big50/images/big-fifty-two.jpg"
+              alt="Business Room"
+            />
             <h4>BUSINESS</h4>
             <p>Room rate: 47,500 <br />Caution fee: 15,000</p>
           </div>
@@ -98,18 +115,151 @@
 
         <div class="colum">
           <div class="it-em">
-            <img src="images/big-fifty-two.jpg" alt="Placeholder Image 5" />
+            <img
+              onclick="showPooopup('five')"
+              src="../Big50/images/big-fifty-two.jpg"
+              alt="Big 50 Room"
+            />
             <h4>BIG 50</h4>
             <p>Room rate: 55,000 <br />Caution fee: 15,000</p>
           </div>
-
           <div class="it-em">
-            <img src="images/big-fifty-two.jpg" alt="Placeholder Image 6" />
+            <img
+              onclick="showPooopup('six')"
+              src="../Big50/images/big-fifty-two.jpg"
+              alt="Presidential Room"
+            />
             <h4>PRESIDENTIAL</h4>
             <p>Room rate: 65,000 <br />Caution fee: 20,000</p>
           </div>
         </div>
       </section>
+
+      <div
+        class="pooopup-overlay"
+        id="pooopup"
+        onclick="handleOutsideClick(event)"
+      >
+        <div class="pooopup-content" onclick="event.stopPropagation()">
+          <!-- Pooopup images containers (same as before) -->
+          <!-- ... your existing pooopupImages-one to pooopupImages-six divs go here ... -->
+          <div class="pooopup-images" id="pooopupImages-one">
+            <div class="pooopup-item">
+              <img src="../Big50/images/bar.jpg" />
+              <p>Anterior view</p>
+            </div>
+            <div class="pooopup-item">
+              <img src="../Big50/images/bar.jpg" />
+              <p>Posterior view</p>
+            </div>
+            <div class="pooopup-item">
+              <img src="../Big50/images/bar.jpg" />
+              <p>Inferior view</p>
+            </div>
+            <div class="pooopup-item">
+              <img src="../Big50/images/bar.jpg" />
+              <p>Superior view</p>
+            </div>
+          </div>
+
+          <div class="pooopup-images" id="pooopupImages-two">
+            <div class="pooopup-item">
+              <img src="../Big50/images/bar-two.jpg" />
+              <p>Anterior view</p>
+            </div>
+            <div class="pooopup-item">
+              <img src="../Big50/images/bar-two.jpg" />
+              <p>Posterior view</p>
+            </div>
+            <div class="pooopup-item">
+              <img src="../Big50/images/bar-two.jpg" />
+              <p>Inferior view</p>
+            </div>
+            <div class="pooopup-item">
+              <img src="../Big50/images/bar-two.jpg" />
+              <p>Superior view</p>
+            </div>
+          </div>
+
+          <div class="pooopup-images" id="pooopupImages-three">
+            <div class="pooopup-item">
+              <img src="../Big50/images/bar-three.jpg" />
+              <p>Anterior view</p>
+            </div>
+            <div class="pooopup-item">
+              <img src="../Big50/images/bar-three.jpg" />
+              <p>Posterior view</p>
+            </div>
+            <div class="pooopup-item">
+              <img src="../Big50/images/bar-three.jpg" />
+              <p>Inferior view</p>
+            </div>
+            <div class="pooopup-item">
+              <img src="../Big50/images/bar-three.jpg" />
+              <p>Superior view</p>
+            </div>
+          </div>
+
+          <div class="pooopup-images" id="pooopupImages-four">
+            <div class="pooopup-item">
+              <img src="../Big50/images/deluxe.jpg" />
+              <p>Anterior view</p>
+            </div>
+            <div class="pooopup-item">
+              <img src="../Big50/images/deluxe.jpg" />
+              <p>Posterior view</p>
+            </div>
+            <div class="pooopup-item">
+              <img src="../Big50/images/deluxe.jpg" />
+              <p>Inferior view</p>
+            </div>
+            <div class="pooopup-item">
+              <img src="../Big50/images/deluxe.jpg" />
+              <p>Superior view</p>
+            </div>
+          </div>
+
+          <div class="pooopup-images" id="pooopupImages-five">
+            <div class="pooopup-item">
+              <img src="../Big50/images/deluxe-two.jpg" />
+              <p>Anterior view</p>
+            </div>
+            <div class="pooopup-item">
+              <img src="../Big50/images/deluxe-two.jpg" />
+              <p>Posterior view</p>
+            </div>
+            <div class="pooopup-item">
+              <img src="../Big50/images/deluxe-two.jpg" />
+              <p>Inferior view</p>
+            </div>
+            <div class="pooopup-item">
+              <img src="../Big50/images/deluxe-two.jpg" />
+              <p>Superior view</p>
+            </div>
+          </div>
+
+          <div class="pooopup-images" id="pooopupImages-six">
+            <div class="pooopup-item">
+              <img src="../Big50/images/deluxe-three.jpg" />
+              <p>Anterior view</p>
+            </div>
+            <div class="pooopup-item">
+              <img src="../Big50/images/deluxe-three.jpg" />
+              <p>Posterior view</p>
+            </div>
+            <div class="pooopup-item">
+              <img src="../Big50/images/deluxe-three.jpg" />
+              <p>Inferior view</p>
+            </div>
+            <div class="pooopup-item">
+              <img src="../Big50/images/deluxe-three.jpg" />
+              <p>Superior view</p>
+            </div>
+          </div>
+
+          <button class="call-btn" onclick="handleOutsideClick()">Close</button>
+        </div>
+      </div>
     </section>
 
     <section id="gallery" class="section">

@@ -44,3 +44,35 @@ function handleOutsideClick(event) {
   const popup = document.getElementById("popup");
   popup.style.display = "none";
 }
+
+//Rooms Popup
+
+function showPooopup(roomId) {
+        document.getElementById("pooopup").style.display = "flex";
+
+        const allGroups = document.querySelectorAll(".pooopup-images");
+        allGroups.forEach((el) => {
+          el.style.display = "none";
+          const items = el.querySelectorAll(".pooopup-item");
+          items.forEach((item) => {
+            item.style.gridColumn = "auto";
+            item.style.justifySelf = "auto";
+          });
+        });
+
+        const selectedGroup = document.getElementById(
+          "pooopupImages-" + roomId
+        );
+        if (selectedGroup) {
+          selectedGroup.style.display = "grid";
+          const items = selectedGroup.querySelectorAll(".pooopup-item");
+          if (items.length % 2 === 1) {
+            items[items.length - 1].style.gridColumn = "span 2";
+            items[items.length - 1].style.justifySelf = "center";
+          }
+        }
+      }
+
+      function handleOutsideClick(event) {
+        document.getElementById("pooopup").style.display = "none";
+      }
