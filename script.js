@@ -40,7 +40,7 @@ function showPopup() {
   document.getElementById("popup").style.display = "flex";
 }
 
-function handleOutsideClick(event) {
+function handleOutsideeClick(event) {
   const popup = document.getElementById("popup");
   popup.style.display = "none";
 }
