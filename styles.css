@@ -184,42 +184,42 @@ header {
   gap: 20px;
 }
 
-      .it-em {
-        text-align: center;
-      }
+.it-em {
+  text-align: center;
+}
 
-      .it-em img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        border-radius: 8px;
-        cursor: pointer;
-      }
+.it-em img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+}
 
-      .it-em h4 {
-        margin: 10px 0 5px;
-      }
+.it-em h4 {
+  margin: 10px 0 5px;
+}
 
-      .it-em img,
-      .pooopup-item img {
-        transition: transform 0.3s ease;
-      }
+.it-em img,
+.pooopup-item img {
+  transition: transform 0.3s ease;
+}
 
-      .it-em img:hover,
-      .pooopup-item img:hover {
-        transform: scale(1.1);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-        transition: transform 0.4s ease, box-shadow 0.4s ease;
-        z-index: 2;
-      }
+.it-em img:hover,
+.pooopup-item img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  z-index: 2;
+}
 
-      .section {
-        padding: 2rem;
-        max-width: 900px;
-        margin: auto;
-        background-color: white;
-        margin-bottom: 1rem;
-      }
+.section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+  background-color: white;
+  margin-bottom: 1rem;
+}
 
 .pooopup-overlay {
   display: none;
@@ -271,7 +271,7 @@ header {
   border-radius: 4px;
 }
 
-.cloose-btn {
+/* .cloose-btn {
   margin-top: 10px;
   padding: 10px 16px;
   background-color: #28a745;
@@ -282,7 +282,7 @@ header {
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-}
+} */
 
 .section {
   padding: 2rem;
