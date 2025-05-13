@@ -50,6 +50,7 @@ function handleOutsideeClick(event) {
 function showPooopup(roomId) {
   const bopup = document.getElementById("pooopup")
   bopup.style.display = "flex"
+   document.body.classList.add("no-scroll");
 
   requestAnimationFrame(() => bopup.classList.add("active"))
 
@@ -80,6 +81,7 @@ function handleOutsideClick(event) {
   setTimeout(() => {
     bopup.style.display = "none";
   }, 400);
+   document.body.classList.remove("no-scroll");
 }
 
 document.addEventListener("keydown", function(e) {
@@ -87,3 +89,4 @@ document.addEventListener("keydown", function(e) {
     document.getElementById("pooopup").style.display = "none";
   }
 })
+

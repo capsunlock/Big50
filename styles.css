@@ -6,6 +6,10 @@ body {
   color: #333;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 
 header {
   background: #fff;
@@ -467,3 +471,4 @@ header {
     margin-left: auto;
   }
 }
+
