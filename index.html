@@ -155,6 +155,7 @@
         onclick="handleOutsideClick(event)"
       >
         <div class="pooopup-content" onclick="event.stopPropagation()">
+          <span class="close" onclick="handleOutsideClick(event)">&times;</span>
           <!-- Pooopup images containers (same as before) -->
           <!-- ... your existing pooopupImages-one to pooopupImages-six divs go here ... -->
           <div class="pooopup-images" id="pooopupImages-one">
@@ -1018,7 +1019,7 @@
             <!-- <img src="images/location-pin.png" /> -->
             <p>
               <strong>Address:</strong> 37JM+62G, opposite fat oil, Jattu, Edo
-              state, NG
+              state, Nigeria
             </p>
           </div>
 
@@ -1043,61 +1044,85 @@
       </div>
     </section>
 
-    <!-- Credits Section -->
-    <section
-      id="credits"
-      style="
-        padding: 2em;
-        background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-        color: #333;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    <style>
+      :root {
+        --bg-light: #f5f7fa;
+        --bg-dark: #1e1e1e;
+        --text-light: #222;
+        --text-dark: #eee;
+        --border-light: #ccc;
+        --border-dark: #444;
+        --link-light: #0066cc;
+        --link-dark: #66d9ef;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .credits-section {
+          background-color: var(--bg-dark);
+          color: var(--text-dark);
+        }
+        #credits,
+        footer {
+          background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
+          color: var(--text-dark);
+          border-top: 1px solid var(--border-dark);
+        }
+        #credits a,
+        footer a {
+          color: var(--link-dark);
+        }
+      }
+
+      @media (prefers-color-scheme: light), not (prefers-color-scheme: dark) {
+        #credits {
+          background: linear-gradient(135deg, var(--bg-light), #e2e8f0);
+          color: var(--text-light);
+          border-top: 1px solid var(--border-light);
+        }
+        footer {
+          background-color: #f0f0f0;
+          color: #555;
+        }
+        #credits a,
+        footer a {
+          color: var(--link-light);
+        }
+      }
+
+      #credits,
+      footer {
         text-align: center;
-        border-top: 2px solid #ddd;
-      "
-    >
-      <h2 style="font-size: 1.8em; margin-bottom: 0.5em">Credits</h2>
-      <p style="margin: 0.5em 0"><strong>Site by:</strong> CapsUnlock</p>
-      <p style="margin: 0.5em 0">
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 0.95em;
+        line-height: 1.4;
+        padding: 1em;
+      }
+
+      footer {
+        font-size: 0.85em;
+        padding: 0.6em 1em;
+      }
+    </style>
+
+    <!-- Credits Section -->
+    <section id="credits" class="credits-section">
+      <h2 style="font-size: 1.3em; margin-bottom: 0.4em">Credits</h2>
+      <p style="margin: 0.3em 0"><strong>Site by:</strong> CapsUnlock</p>
+      <p style="margin: 0.3em 0">
         <strong>Role:</strong> Web Developer & Designer
       </p>
-      <p style="margin: 0.5em 0">
+      <p style="margin: 0.3em 0">
         <strong>Contact:</strong>
-        <a href="mailto:capsonluck@gmail.com" style="color: #0066cc"
-          >capsonluck@gmail.com</a
-        >
-        |
-        <a
-          href="https://github.com/capsunlock"
-          target="_blank"
-          style="color: #0066cc"
-          >GitHub</a
-        >
+        <a href="mailto:capsonluck@gmail.com">capsonluck@gmail.com</a> |
+        <a href="https://github.com/capsunlock" target="_blank">GitHub</a>
       </p>
     </section>
 
     <!-- Footer -->
-    <footer
-      style="
-        text-align: center;
-        padding: 1em;
-        background-color: #1f1f1f;
-        color: #bbb;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      "
-    >
+    <footer>
       Website designed by
-      <a
-        href="https://github.com/capsunlock"
-        target="_blank"
-        style="color: #4fc3f7; text-decoration: none"
-        >CapsUnlock</a
-      >
-      —
-      <a
-        href="mailto:capsonluck@gmail.com"
-        style="color: #4fc3f7; text-decoration: none"
-        >capsonluck@gmail.com</a
-      >
+      <a href="https://github.com/capsunlock" target="_blank">CapsUnlock</a> —
+      <a href="mailto:capsonluck@gmail.com">capsonluck@gmail.com</a>
     </footer>
 
     <script src="script.js"></script>
