@@ -957,13 +957,13 @@
 
     <section id="reviews" class="section">
       <h2>Reviews</h2>
-      <div id="review-content">
-        <div id="review-one" class="review">
+      <div class="review-content">
+        <div class="review">
           <div class="stars">★★★★★</div>
           <p>"I had a great time in and the service was beyond impressive."</p>
           <strong>Chukwuka Obioma (via Google Maps)</strong>
         </div>
-        <div id="review-two" class="review">
+        <div class="review">
           <div class="stars">★★★★★</div>
           <p>
             "Very comfortable and serene hotel with Excellent reception too, I
@@ -972,8 +972,8 @@
           <strong>Samad Momodu</strong>
         </div>
       </div>
-      <div id="review-content">
-        <div id="review-one" class="review">
+      <div class="review-content">
+        <div class="review">
           <div class="stars">★★★★☆</div>
           <p>
             "This is easily the cleanest and most well-maintained facility out
@@ -981,7 +981,7 @@
           </p>
           <strong>Clementina Abiola</strong>
         </div>
-        <div id="review-two" class="review">
+        <div class="review">
           <div class="stars">★★★★★</div>
           <p>
             "One of the most amazing places in the area. Highly recommended if
@@ -991,7 +991,43 @@
         </div>
       </div>
       <div id="read-more">
-        <a href="" class="btn">Read More</a>
+        <button id="read-rev-button" class="btn" onclick="showReviews()">
+          Read More
+        </button>
+      </div>
+
+      <!-- More Reviews -->
+
+      <div id="more-reviews" class="overlay">
+        <div class="review-content">
+          <div class="review">
+            <div class="stars">★★★★★</div>
+            <p>"Great place. I had a wonderful time."</p>
+            <strong>Fatai Abubaka</strong>
+          </div>
+          <div class="review">
+            <div class="stars">★★★★★</div>
+            <p>
+              "Very well maintained facilities. A good value for its price."
+            </p>
+            <strong>Idemudia Faith</strong>
+          </div>
+        </div>
+        <div class="review-content">
+          <div class="review">
+            <div class="stars">★★★★★</div>
+            <p>"Cool and calm."</p>
+            <strong>Adegoke Taiwo</strong>
+          </div>
+          <div class="review">
+            <div class="stars">★★★★★</div>
+            <p>"Worth every penny"</p>
+            <strong>Musa Abdulsalam</strong>
+          </div>
+        </div>
+        <div class="close-btn-wrapper">
+          <button class="close-rev-btn" onclick="hideReviews()">Close</button>
+        </div>
       </div>
     </section>
 

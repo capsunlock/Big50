@@ -90,3 +90,28 @@ document.addEventListener("keydown", function(e) {
   }
 })
 
+//Review
+
+const readBtn = document.querySelector("#read-rev-button");
+
+const moreReviews = document.getElementById("more-reviews");
+
+function showReviews() {
+  moreReviews.classList.add("show");
+  moreReviews.classList.remove("fade-out");
+  moreReviews.classList.remove("hidden");
+  moreReviews.style.display = "flex";
+  readBtn.style.display = "none";
+}
+function hideReviews() {
+  moreReviews.classList.add("fade-out");
+  moreReviews.classList.remove("show");
+
+  setTimeout(() => {
+    moreReviews.style.display = "none";
+    moreReviews.classList.remove("fade-out");
+    moreReviews.classList.add("hidden");
+    readBtn.style.display = "inline-block";
+  }, 500);
+}
+
